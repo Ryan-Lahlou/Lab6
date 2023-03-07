@@ -10,3 +10,13 @@ def encode(password):
     for num in encode_list:
         encode_str += str(num)
     return encode_str
+
+def decode(password):
+    res = ""
+    for digit in password:
+        if int(digit) >= 3:
+            digit = int(digit) - 3
+        else:
+            digit = (int(digit) - 3) + 10
+        res += str(digit)
+    print(res)
